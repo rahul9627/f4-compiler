@@ -7,7 +7,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-COMPILER_PATH = os.path.join(os.path.dirname(__file__), 'F4compiler_modular.exe')
+if os.name == 'nt':
+    COMPILER_PATH = os.path.join(os.path.dirname(__file__), 'F4compiler_modular.exe')
+else:
+    COMPILER_PATH = os.path.join(os.path.dirname(__file__), 'f4compiler_modular')
 
 @app.route('/')
 def index():
