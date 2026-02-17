@@ -1,0 +1,13 @@
+# Compiled Binaries
+*.exe
+*.o
+*.obj
+*.dll
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
